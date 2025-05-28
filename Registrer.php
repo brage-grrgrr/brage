@@ -18,7 +18,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $usernameverifisiering = "SELECT * FROM account WHERE brukernavn = '$brukernavn'";
     $result = $con->query($usernameverifisiering);
 
-    
+    if ($result->num_rows > 0) {
+        echo "Det finnes allerede en bruker med dette navnet" . $con->error;
+    } else {
+        // hvis det fungerer så vil den nye brukeren bli insertet inn i databasen
+        $sql = "INSERT INTO account (brukernavn, passord) VALUES ('$brukernavn', '$passord')";
+    }
+    if ($con->query($sql) === TRUE) {
+        echo "Bruker registrert! <a href='login.php'>Logg inn her</a>";
+    } else {
+        echo "Feil: " . $con->error;
+    }
+
+    $con->close();
 }
 
 
