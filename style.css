@@ -33,6 +33,30 @@ body {
     background-color:white;
 }
 
+
+/* skapper boksen som knappene er i */
+.topnav {
+    overflow: hidden;
+    background-color: #429246;
+}
+    
+/* styler knappene i seg selv */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 0;
+    text-decoration: none;
+    width: 50%; 
+}
+    
+  /* når musa er over på knappene så vil fargen til teksen og bakgrunnen endre for å registrere at musa er over */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
 /*gjør så når kjermen er mindre en 600px så vil den gjøre så kollonene siden og midten får størelse tilsvarende 100% av det kjermen er*/
 @media screen and (max-width: 600px) {
     .column.side, .column.middle {
