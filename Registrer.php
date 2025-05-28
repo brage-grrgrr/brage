@@ -11,18 +11,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         die("Tilkoblingsfeil: " . $con->connect_error);
     }
     // Hent data fra skjemaet
-    $brukernavn = $_POST['brukernavn'];
+    $brukernavn = $_POST['Brukernavn'];
     $passord = password_hash($_POST['passord'], PASSWORD_DEFAULT); // Hasher passordet
     
     // skjeker om brukernavnet finnes fra før av i databasen
-    $usernameverifisiering = "SELECT * FROM account WHERE brukernavn = '$brukernavn'";
+    $usernameverifisiering = "SELECT * FROM bruker WHERE Brukernavn = '$brukernavn'";
     $result = $con->query($usernameverifisiering);
 
     if ($result->num_rows > 0) {
         echo "Det finnes allerede en bruker med dette navnet" . $con->error;
     } else {
         // hvis det fungerer så vil den nye brukeren bli insertet inn i databasen
-        $sql = "INSERT INTO account (brukernavn, passord) VALUES ('$brukernavn', '$passord')";
+        $sql = "INSERT INTO bruker (Brukernavn, Passord) VALUES ('$brukernavn', '$passord')";
     }
     if ($con->query($sql) === TRUE) {
         echo "Bruker registrert! <a href='login.php'>Logg inn her</a>";
@@ -32,8 +32,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $con->close();
 }
-
-
 ?>
 
 
@@ -54,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </div>
     <form action="registrer.php" method="POST">
         <div class="container">
-            <input type="text" name="brukernavn" placeholder="skriv brukernavn" required>
+            <input type="text" name="Brukernavn" placeholder="skriv brukernavn" required>
             <input type="password" name="passord" placeholder="skriv passord" required>
             <button type="submit">Registrer</button>
 
