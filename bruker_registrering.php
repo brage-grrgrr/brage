@@ -7,8 +7,8 @@ $table = "bruker";
 try {
   $db = new PDO("mysql:host=localhost;dbname=$database", $user, $password);
   echo "<h2>TODO</h2><ol>";
-  foreach($db->query("SELECT content FROM $table") as $row) {
-    echo "<li>" . $row['content'] . "</li>";
+  foreach($db->query("SELECT Brukernavn FROM $table") as $row) {
+    echo "<li>" . htmlspecialchars($row['Brukernavn']) . "</li>";
   }
   echo "</ol>";
 } catch (PDOException $e) {
