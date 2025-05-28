@@ -5,6 +5,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $pass = "7656Fuck+PaswordSh$#t";
     $db = "bruker_registrering";
 
+    $con = mysqli_connect($host, $user, $pass, $db);
+
+    if ($con->connect_error) {
+        die("Tilkoblingsfeil: " . $con->connect_error);
+    }
+
 }
 
 
