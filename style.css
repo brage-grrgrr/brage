@@ -19,6 +19,7 @@ body {
 /*gjør så allt i klasen flyter til siden isteden for å bli samplet på toppen med en*/
 .column {
     float: left;
+    padding: 10px
   }
     
 
