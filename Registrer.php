@@ -10,7 +10,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($con->connect_error) {
         die("Tilkoblingsfeil: " . $con->connect_error);
     }
+    // Hent data fra skjemaet
+    $brukernavn = $_POST['brukernavn'];
+    $passord = password_hash($_POST['passord'], PASSWORD_DEFAULT); // Hasher passordet
+    
+    // skjeker om brukernavnet finnes fra før av i databasen
+    $usernameverifisiering = "SELECT * FROM account WHERE brukernavn = '$brukernavn'";
+    $result = $con->query($usernameverifisiering);
 
+    
 }
 
 
