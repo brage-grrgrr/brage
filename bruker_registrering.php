@@ -1,8 +1,8 @@
 <?php
 $user = "example_user";
-$password = "password";
-$database = "example_database";
-$table = "todo_list";
+$password = "7656Fuck+PaswordSh$#t";
+$database = "bruker_registrering";
+$table = "bruker";
 
 try {
   $db = new PDO("mysql:host=localhost;dbname=$database", $user, $password);
