@@ -32,3 +32,9 @@ body {
     background-color:white;
 }
 
+/*gjør så når kjermen er mindre en 600px så vil den gjøre så kollonene siden og midten får størelse tilsvarende 100% av det kjermen er*/
+@media screen and (max-width: 600px) {
+    .column.side, .column.middle {
+      width: 100%;
+    }
+  }
