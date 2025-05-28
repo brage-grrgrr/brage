@@ -9,6 +9,17 @@
 
 <body>
 
+<div class="header">
+    <h1>Registrer deg</h1>
+    </div>
+    <form action="registrer.php" method="POST">
+        <div class="container">
+            <input type="text" name="brukernavn" placeholder="skriv brukernavn" required>
+            <input type="password" name="passord" placeholder="skriv passord" required>
+            <button type="submit">Registrer</button>
 
+        </div>
+    </form>
+    
 </body>
 </html>
