@@ -1,7 +1,10 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') { 
+    $host = 'localhost';
+    $user = "brage";
+    $pass = "7656Fuck+PaswordSh$#t";
+    $db = "bruker_registrering";
 
-    
 }
 
 
