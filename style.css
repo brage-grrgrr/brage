@@ -17,19 +17,18 @@ body {
 }
 
 /*gjør så allt i klasen flyter til siden isteden for å bli samplet på toppen med en*/
-.kollone {
+.column {
     float: left;
-    padding: 10px;
   }
     
 
-.kollone.siden {
-width: 25%;
+.column.side {
+    width: 25%;
 }
     
 
-.kollone.midten {
-width: 50%;
-background-color:white;
+.column.middle {
+    width: 50%;
+    background-color:white;
 }
 
