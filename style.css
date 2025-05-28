@@ -9,3 +9,27 @@ body {
     padding: 20px;
     text-align: center;
 }
+
+.rad::etter {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*gjør så allt i klasen flyter til siden isteden for å bli samplet på toppen med en*/
+.kollone {
+    float: left;
+    padding: 10px;
+  }
+    
+
+.kollone.siden {
+width: 25%;
+}
+    
+
+.kollone.midten {
+width: 50%;
+background-color:white;
+}
+
